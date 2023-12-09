@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Price Plans</title>
+<link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+  <script src="scripts.js"></script>
+  <style>
+  
+  
+  
+  
+  
+container {
+  position: absolute;
+}
+
+.bgpic {
+  position: absolute;
+  top: 150px;
+  right: 200px;
+  width: 38%;
+}
+
+.content {
+}
+::-webkit-scrollbar {
+display: none;
+}
+
+
+.kwadrat {
+  width: 1470px;
+  height: 170px;
+  border-radius: 20px;
+  box-shadow: inset 0 0 3px 2px #2B2B2B;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+}
+
+.kwadrat .tekst {
+  margin-right: 300px;
+  white-space: nowrap;
+  font-size: 20px;
+  padding-left: 60px;
+  color: white;
+  left: 200px; 
+}
+
+
+
+.text-1 {
+  font-size: 3em;
+  font-weight: bold;
+  background-image: linear-gradient(to right, #ff9a00, #ff4e00);
+  -webkit-background-clip: text;
+  color: transparent;
+  padding: 20px; 
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start; 
+  position: absolute;
+  top: 300px;
+  left: 200px;
+  margin-top: -20px;
+}
+
+.text-2 {
+  font-size: 1.75em;
+  font-weight: bold;
+  color: #3B3B3B;
+  display: flex;
+  align-items: flex-start; 
+  position: absolute;
+  top: 400px;
+  left: 222px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.up-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #111111;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+  z-index: 999;
+  opacity: 0.9;
+  border-bottom: 3px solid #303030;
+}
+
+.right-text {
+  font-size: 24px;
+  color: white;
+  float: right;
+  margin-left: 350px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px 10px;
+}
+
+
+
+.left-side img {
+  max-width: 100px;
+  margin-left: 200px;
+}
+
+.right-side {
+  margin-left: 200px; 
+}
+
+.right-side img {
+  max-width: 100px;
+  margin: 0 200px;
+}
+
+
+  body {
+	  cursor: url('cur.png') 10 10, auto;
+      font-family: 'Gilroy-medium', sans-serif;
+      background: #111111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+
+
+    .plan ul li {
+	  font-height: 20px;
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 35px;
+      line-height: 1.9;
+      display: flex;
+      align-items: center;
+	  font-size: 20px;
+	  
+    }
+
+    .plan ul li:before {
+      content: '';
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      background-size: cover;
+      position: relative;
+      flex-shrink: 0;
+	  z-index: 20;
+    }
+
+    .plan ul li span {
+	
+      display: inline-block;
+      vertical-align: middle;
+	  z-index: 40;
+    }
+   .plan ul li:nth-of-type(1):before {
+      background-image: url('1.png');
+    }
+
+    .plan ul li:nth-of-type(2):before {
+      background-image: url('2.png');
+    }
+	
+	.plan ul li:nth-of-type(3):before {
+      background-image: url('3.png');
+    }
+
+	.plan ul li:nth-of-type(4):before {
+      background-image: url('4.png');
+    }
+
+	.plan ul li:nth-of-type(5):before {
+      background-image: url('5.png');
+    }			
+   
+	.plan.animation {
+      opacity: 0;
+      transform: translateY(500px);
+      animation: appear 0.75s forwards;
+    }
+    @keyframes appear {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }		
+    .main {
+     font-size: 42px;
+	 font-family: 'Gilroy-medium', sans-serif;
+
+    }
+    .plans-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 70px;
+
+    }
+    .plan {
+      background-color: #191919;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: left;
+      width: 400px;
+      height: 600px;
+      color: #ffff;
+      font-family: 'Gilroy-medium', sans-serif;
+      overflow: hidden;
+      position: relative;
+	  margin-top: 2000px;
+	  
+    }
+
+    .plan h2 {
+      font-size: 40px;
+      margin-bottom: 40px;
+	  padding-left: 40px;
+	 
+    }
+    .plan .price {
+      font-size: 2px;
+      font-weight: bold;
+      margin-bottom: 60px;
+	  padding-left: 40px;
+	  
+    }
+    .plan .secondary {
+      font-size: 18px;
+      font-weight: normal;
+    }
+    .plan ul {
+      list-style: none;
+      padding: 0;
+    }
+    .plan ul li .label {
+      padding-left: 30px;
+      display: block;
+      position: absolute;
+    }
+.plan .selc {
+	  font-family: 'Gilroy-medium', sans-serif;
+	  font-size: 24px;
+      background: linear-gradient(to bottom right, #ff9a00, #ff4e00);
+      color: White;
+      border: none;
+      padding: 10px 10px;
+      width: 220px;
+      height: 50px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 9s ease, box-shadow 1s ease;	
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .plan .selc:hover {
+    box-shadow: 0px 0px 0px 0px rgba(255, 78, 0, 0.5);
+
+      z-index: 3;
+    }
+	
+	
+	@media (max-width: 800px) {
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	.right-text {
+  font-size: 24px;
+  color: white;
+  float: right;
+  margin-left: 150px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px 10px;
+}
+.left-side img {
+  max-width: 100px;
+  margin-left: 0px;
+}	
+	
+	
+	
+	
+	
+.text-1 {
+  font-size: 3em;
+  font-weight: bold;
+  background-image: linear-gradient(to right, #ff9a00, #ff4e00);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start; 
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  margin-top: -20px;
+}
+
+.text-2 {
+  font-size: 1.75em;
+  font-weight: bold;
+  color: #3B3B3B;
+  display: flex;
+  align-items: flex-start; 
+  position: absolute;
+  top: 36%;
+  left: 14%;
+}
+	
+	
+.kwadrat {
+display: none; 
+  
+}
+
+.kwadrat .tekst {
+display: none;
+}
+	
+	
+	
+	
+container {
+  position: absolute;
+}
+
+.bgpic {
+  position: absolute;
+  top: 60%;
+  right: 0%;
+  width: 90%;
+}
+
+  .plans-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .plan {
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+  .plan h2 {
+    font-size: 14px;
+    margin-bottom: 30px; 
+    padding-left: 20px; 
+  }
+  .plan .price {
+    font-size: 18px; 
+    margin-bottom: 40px;
+    padding-left: 20px;
+  }
+  .plan .selc {
+    font-size: 18px; 
+    bottom: 20px; 
+  }
+
+.plan {
+      background-color: #191919;
+      border-radius: 15px;
+      box-shadow: 0 0px 0px black;
+      padding: 20px;
+      text-align: left;
+      width: 400px;
+      height: 550px;
+      color: #fff;
+      font-family: 'Gilroy-medium', sans-serif;
+      overflow: hidden;
+      position: relative;
+	  margin-top: 90px;
+	  top: 2000px;
+    }
+
+  </style>
+</head>
+<body>
+
+
+ <header class="up-bar">
+    <div class="left-side">
+      <img src="logo.png" alt="Logo">
+	    <div class="right-text">GGRealm</div>
+    </div>
+    <div class="right-side">
+      <a href="https://discord.com" target="_blank">
+        <img src="dc.png" alt="Obrazek">
+      </a>
+    </div>
+	
+  </header>
+   <div class="text-1">
+    Hosting serweruw Minecraft
+  </div>
+  <div class="text-2">
+    najlepszy twuj
+  </div>
+  <div>
+
+  </div>
+  <div class="kwadrat">
+  <div class="tekst">Siema</div>
+  <div class="tekst">Cześć</div>
+  <div class="tekst">Witaj</div>
+  <div class="tekst">Witaj</div>
+</div>
+</body>
+<body>
+
+  <div class="plans-container">
+    <!-- Pierwszy plan -->
+    <div class="plan animation" style="animation-delay: 0.1s;">
+      <h2>Basic</h2>
+      <div class="price"><span class="main">Bezpłatne</span><span class="secondary"></span></div>
+      <ul>
+        <li><span>Procesor: 1 vCore 5.1ghz</span></li>
+        <li><span>RAM: 3GB</span></li>
+        <li><span>Dysk: SSD NVMe 4GB</span></li>
+        <li><span>Pluginy: Bez limitu</span></li>
+        <li><span>Liczba Graczy: Bez limitu</span></li>
+      </ul>
+      <button class="selc">Wybierz</button>
+    </div>
+
+    <!-- Drugi plan -->
+    <div class="plan animation" style="animation-delay: 0.4s;">
+      <h2>Standard</h2>
+      <div class="price"><span class="main">4</span><span class="secondary"> PLN / Miesiąc</span></div>
+      <ul>
+        <li><span>Procesor: 2 vCore 5.1ghz</span></li>
+        <li><span>RAM: 6GB</span></li>
+        <li><span>Dysk: SSD NVMe 8GB</span></li>
+        <li><span>Pluginy: Bez limitu</span></li>
+        <li><span>Liczba Graczy: Bez limitu</span></li>
+      </ul>
+      <button class="selc">Wybierz</button>
+    </div>
+
+    <!-- Trzeci plan -->
+    <div class="plan animation" style="animation-delay: 0.7s;">
+      <h2>Premium</h2>
+      <div class="price"><span class="main">8</span><span class="secondary"> PLN / Miesiąc</span></div>
+      <ul>
+        <li><span>Procesor: 4 vCore 5.1ghz</span></li>
+        <li><span>RAM: 12GB</span></li>
+        <li><span>Dysk: SSD NVMe 16GB</span></li>
+        <li><span>Pluginy: Bez limitu</span></li>
+        <li><span>Liczba Graczy: Bez limitu</span></li>
+      </ul>
+      <button class="selc">Wybierz</button>
+    </div>
+  </div>
+  	 
+  
+ <img class="bgpic" src="y.jpg" alt="Opis zdjęcia">
+
+<div class="footer-squaree"></div>
+
+  <script src="scripts.js"></script>
+  <script>
+    document.addEventListener('mousemove', function (e) {
+      if (window.innerWidth >= 800) {
+        const bgpic = document.querySelector('.bgpic');
+        const mouseX = e.clientX / window.innerWidth - 0;
+        const mouseY = e.clientY / window.innerHeight - 0;
+        bgpic.style.transform = `translate(${mouseX * 190}px, ${mouseY * 100}px)`;
+      }
+    });
+  </script>
+
+</body>
+
+</html>
